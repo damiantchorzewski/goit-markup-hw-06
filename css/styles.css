@@ -12,7 +12,9 @@
   --border-header: #ececec;
   --border-figure: #eeeeee;
   --bg-grey: #f5f4fa;
+  --bg-modal: rgba(0 0 0 / 0.1);
   --border-btn: #afb1b8;
+  --border-input: rgba(33 33 33 / 0.2);
   --bg-grey-dark: #2f303a;
   --shadows-2: rgba(255, 255, 255, 0.1);
   --shadows-1: rgba(255, 255, 255, 0.6);
@@ -256,6 +258,7 @@ h3 {
   transform: scale(0);
 }
 .modal {
+  padding: 40px;
   margin: auto;
   width: 528px;
   height: 581px;
@@ -279,6 +282,152 @@ h3 {
   margin: auto;
   width: 18px;
   height: 18px;
+}
+.window-header {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal-forms {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--grey-text-normal);
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.input-container {
+  position: relative;
+}
+
+.modal-input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border var(--transition-duration) var(--cubic-bezier);
+  will-change: border;
+}
+
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: var(--blue);
+  fill: var(--blue);
+}
+
+.modal-textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  resize: none;
+  outline: transparent;
+  transition: border var(--transition-duration) var(--cubic-bezier);
+  will-change: border;
+}
+
+.modal-textarea::placeholder {
+  opacity: 0.5;
+  color: var(--grey-text-normal);
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.icon-modal {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: var(--black-title);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+  will-change: fill;
+}
+.input-container:hover > svg {
+  fill: var(--blue);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: var(--grey-text-normal);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.checkbox-label {
+  position: relative;
+}
+
+.checkbox-input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox-input:checked + svg {
+  visibility: hidden;
+}
+
+.checkbox-input ~ svg:nth-of-type(2) {
+  visibility: hidden;
+}
+
+.checkbox-input:checked ~ svg:nth-of-type(2) {
+  visibility: visible;
+}
+
+.checkbox-row a,
+.checkbox-row:hover a {
+  color: var(--blue);
+}
+
+.checkbox-svg {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  top: 3px;
+  user-select: none;
+}
+
+.statement {
+  margin-left: 24px;
+}
+
+.modal-button {
+  display: flex;
+  margin: auto;
+  padding: 10px 76px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ========== SKILLS_ICONS ========= */
@@ -528,6 +677,49 @@ h3 {
   padding-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
+}
+.footer-newsletter {
+  padding-bottom: 45px;
+}
+
+.footer-form-container {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-input {
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  background-color: rgba(0 0 0 / 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--shadows-1);
+}
+
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--shadows-1);
+}
+
+.button-newsletter {
+  padding-left: 42px;
+  padding-right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* ========== PORTFOLIO_FILTRS ========= */
 
