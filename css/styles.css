@@ -190,10 +190,14 @@ h3 {
 
 /* ========== BANER ========= */
 
-.btn-order:hover {
+.btn-order:hover,
+.btn-window:hover,
+.btn-newsletter:hover {
   color: var(--black);
 }
-.btn-order:focus {
+.btn-order:focus,
+.btn-window:focus,
+.btn-newsletter:focus {
   color: var(--black);
 }
 .section-baner {
@@ -330,7 +334,6 @@ h3 {
 .modal-input:focus,
 .modal-textarea:focus {
   border-color: var(--blue);
-  fill: var(--blue);
 }
 
 .modal-textarea {
@@ -365,7 +368,7 @@ h3 {
   fill: var(--blue);
 }
 
-.checkbox-row {
+.checkbox-text {
   display: flex;
   align-items: center;
   padding-left: 15px;
@@ -397,8 +400,8 @@ h3 {
   visibility: visible;
 }
 
-.checkbox-row a,
-.checkbox-row:hover a {
+.checkbox-text a,
+.checkbox-text:hover a {
   color: var(--blue);
 }
 
@@ -410,11 +413,11 @@ h3 {
   user-select: none;
 }
 
-.statement {
+.acept {
   margin-left: 24px;
 }
 
-.modal-button {
+.btn-window {
   display: flex;
   margin: auto;
   padding: 10px 76px;
@@ -678,6 +681,9 @@ h3 {
   font-size: 14px;
   font-weight: 700;
 }
+
+/* ========== FOOTER_NEWSLETTER ========= -->*/
+
 .footer-newsletter {
   padding-bottom: 45px;
 }
@@ -704,7 +710,7 @@ h3 {
   color: var(--shadows-1);
 }
 
-.button-newsletter {
+.btn-newsletter {
   padding-left: 42px;
   padding-right: 28px;
   display: flex;
