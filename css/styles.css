@@ -331,6 +331,9 @@ h3 {
 .modal-input:focus-within {
   border-color: var(--blue);
 }
+.modal-textarea:focus-within {
+  border-color: var(--blue);
+}
 .input-container:focus-within .icon-modal {
   fill: var(--blue);
 }
