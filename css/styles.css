@@ -318,6 +318,7 @@ h3 {
 
 .input-container {
   position: relative;
+  width: 100%;
 }
 
 .modal-input {
@@ -359,7 +360,7 @@ h3 {
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 11px;
+  top: 28px;
   left: 12px;
   fill: var(--black-title);
   transition: fill var(--transition-duration) var(--cubic-bezier);
